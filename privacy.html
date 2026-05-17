@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - KAI SHING LUNG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a2e',
+                        secondary: '#16213e',
+                        accent: '#e94560',
+                        gold: '#c9a959',
+                        cream: '#f5f5f0',
+                        dark: {
+                            bg: '#0f0f1a',
+                            card: '#1a1a2e',
+                            text: '#e5e5e5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --gold: #c9a959;
+            --cream: #f5f5f0;
+        }
+        .dark {
+            --primary: #0f0f1a;
+            --secondary: #1a1a2e;
+            --bg: #0f0f1a;
+            --card-bg: #1a1a2e;
+            --text: #e5e5e5;
+        }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #c9a959, #e94560);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
+    <header class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-card/95 backdrop-blur-md shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-gold to-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">KS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-primary dark:text-white tracking-wider">KAI SHING LUNG</h1>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">专业礼服研发生产与批发</p>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-primary dark:text-white font-medium hover:text-accent dark:hover:text-accent transition-colors">首页</a>
+                    <a href="products.html" class="nav-link text-primary dark:text-white font-medium hover:text-accent dark:hover:text-accent transition-colors">产品中心</a>
+                    <a href="about.html" class="nav-link text-primary dark:text-white font-medium hover:text-accent dark:hover:text-accent transition-colors">公司简介</a>
+                    <a href="contact.html" class="nav-link text-primary dark:text-white font-medium hover:text-accent dark:hover:text-accent transition-colors">合作咨询</a>
+                    <a href="#about" class="nav-link text-primary dark:text-white font-medium hover:text-accent dark:hover:text-accent transition-colors">关于我们</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+                        </svg>
+                        <svg class="w-6 h-6 dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg class="w-6 h-6 text-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white dark:bg-dark-card lg:hidden z-50">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-4 border-b dark:border-gray-700">
+                    <span class="text-xl font-bold text-primary dark:text-white">菜单</span>
+                    <button id="close-menu" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg class="w-6 h-6 text-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex-1 p-4 space-y-4">
+                    <a href="index.html" class="block py-3 px-4 text-lg font-medium text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">首页</a>
+                    <a href="products.html" class="block py-3 px-4 text-lg font-medium text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">产品中心</a>
+                    <a href="about.html" class="block py-3 px-4 text-lg font-medium text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">公司简介</a>
+                    <a href="contact.html" class="block py-3 px-4 text-lg font-medium text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">合作咨询</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 min-h-screen">
+        <section class="py-12 bg-gray-50 dark:bg-dark-bg">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-primary dark:text-white mb-8 text-center">隐私政策</h1>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-lg">
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">更新日期：2024年1月1日</p>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">1. 信息收集</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">我们可能会收集您在使用服务时主动提供的信息，包括但不限于：</p>
+                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li>联系信息（姓名、电话、电子邮箱）</li>
+                            <li>公司信息（如适用）</li>
+                            <li>咨询内容和相关描述</li>
+                        </ul>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">2. 信息使用</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">我们收集的信息将用于：</p>
+                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li>回复您的咨询并提供客户服务</li>
+                            <li>改进我们的产品和服务</li>
+                            <li>发送与您业务相关的通知</li>
+                        </ul>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">3. 信息保护</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">我们采取适当的安全措施保护您的个人信息，防止未经授权的访问、使用或泄露。</p>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">4. 信息共享</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">未经您的同意，我们不会与任何第三方共享您的个人信息，法律法规要求的情况除外。</p>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">5. Cookie使用</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">我们的网站可能使用Cookie来改善用户体验。您可以通过浏览器设置禁用Cookie，但这可能影响网站部分功能。</p>
+
+                        <h2 class="text-xl font-semibold text-primary dark:text-white mt-8 mb-4">6. 联系我们</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">如您对隐私政策有任何疑问，请通过以下方式联系我们：</p>
+                        <p class="text-gray-600 dark:text-gray-400">邮箱：RodneyStevens8168@outlook.com</p>
+                        <p class="text-gray-600 dark:text-gray-400">电话：+852 59735547</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary dark:bg-dark-bg text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2024 广州高臣服饰有限公司 版权所有</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">首页</a>
+                    <a href="products.html" class="text-gray-400 hover:text-gold text-sm transition-colors">产品中心</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-gold text-sm transition-colors">合作咨询</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+            });
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+            });
+
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
